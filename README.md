@@ -1,4 +1,4 @@
-# pyBKT-examples
+# pyBKT-examples forked by [CAHLR](https://github.com/CAHLR/pyBKT-examples)
 A collection of utility and example files evaluating the validity of pyBKT, a python implementation of different variants of Bayesian Knowledge Tracing algorithms to model student learning rates of particular skills. Examples and utility files created by Frederic Wang (fredwang@berkeley.edu) using Professor Zachary Pardos' (zp@berkeley.edu) work from the pyBKT library (https://github.com/CAHLR/pyBKT). Example data sets are from Piech (https://github.com/chrispiech/DeepKnowledgeTracing), Assistments (https://sites.google.com/site/assistmentsdata/home/2012-13-school-data-with-affect) and Cognitive Tutors (https://pslcdatashop.web.cmu.edu/KDDCup/downloads.jsp).
 
 # Installation
