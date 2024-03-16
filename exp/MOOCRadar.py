@@ -1,5 +1,5 @@
-from pyBKT.models import Model
 import pandas as pd
+from pyBKT.models import Model
 
 # 显示所有列
 pd.set_option('display.max_columns', None)
@@ -16,10 +16,11 @@ if __name__ == '__main__':
     # Load unfamiliar dataset.
     df = pd.read_csv('../data/student-problem-middle.csv')
     # df = pd.read_csv('../data/student-problem-coarse.csv')
+    data_path = '../data/middle.csv'
     config = {'multigs': False,
               'multilearn': False,
-              'forgets': False,
-              'multigs_cognitive_level': False,
+              'forgets': False
+              # 'multigs_cognitive_level': False,
               }
     defaults = {'order_id': 'num',
                 'user_id': 'student',
@@ -29,7 +30,7 @@ if __name__ == '__main__':
                 'multigs': 'gs_classes'}
 
     # Fit using the defaults (column mappings) specified in the dictionary.
-    model.fit(data=df, defaults=defaults, **config)
+    model.fit(data=df, defaults=defaults, )
 
     # Predict/evaluate/etc.
     # training_acc = model.evaluate(data=df, metric='accuracy')

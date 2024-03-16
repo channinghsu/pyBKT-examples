@@ -9,7 +9,7 @@ skills = ["Venn Diagram"]
 
 model = Model(seed = 0, num_fits = 10)
 print("BKT")
-print(model.crossvalidate(data_path = "data/as.csv", skills = skills, metric = "rmse"))
+print(model.crossvalidate(data_path = "../data/as.csv", skills = skills, metric = "rmse"))
 print()
 print("Item Order Effect")
-print(model.crossvalidate(data_path = "data/as.csv", skills = skills, multipair = True, metric = "rmse")["rmse"].values)
+print(model.crossvalidate(data_path = "../data/as.csv", skills = skills, multipair = True, metric = "rmse")["rmse"].values)

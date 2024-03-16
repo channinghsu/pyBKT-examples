@@ -12,7 +12,7 @@ seed, folds = 2020, 5 #can customize to anything, keep same seed and # folds ove
 
 
 # IMPORTANT!!! Choose whether to use all 42 problem sets or just the problem sets of length 4
-all_files = os.listdir("./data/glops-exact-processed") # all 42 sets
+all_files = os.listdir("../data/glops-exact-processed") # all 42 sets
 
 
 total_responses = 0
@@ -27,7 +27,7 @@ for i in all_files:
                 
     print("Creating model for ", i)
     
-    df0 = pd.read_csv("./data/glops-exact-processed/"+i)
+    df0 = pd.read_csv("../data/glops-exact-processed/"+i)
     seq_length = round(len(df0) / len(df0["user_id"].unique()))
     df_train = (df0.groupby('user_id').apply(lambda x: x.iloc[:-1] if len(x)>1 else x).reset_index(drop=True)) #remove all but last element
     
@@ -42,7 +42,7 @@ for i in all_files:
     
     
     
-    df0 = pd.read_csv("./data/glops-exact-processed/"+i)
+    df0 = pd.read_csv("../data/glops-exact-processed/"+i)
     seq_length = round(len(df0) / len(df0["user_id"].unique()))
     df_train = (df0.groupby('user_id').apply(lambda x: x.iloc[:-1] if len(x)>1 else x).reset_index(drop=True)) #remove all but last element
     model2 = Model(num_fits = 10, seed=2020)
