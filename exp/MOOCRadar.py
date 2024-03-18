@@ -23,14 +23,14 @@ if __name__ == '__main__':
               # 'multigs_cognitive_level': False,
               }
     defaults = {'order_id': 'num',
-                'user_id': 'student',
-                'skill_name': 'skill',
-                'correct': 'right',
+                'skill_name': 'skill_id',
+                'correct': 'is_correct',
+                'cognitive_label': 'cognitive_label',
                 'folds': 'student',
                 'multigs': 'gs_classes'}
 
     # Fit using the defaults (column mappings) specified in the dictionary.
-    model.fit(data=df, defaults=defaults, )
+    model.fit(data=df, defaults=defaults)
 
     # Predict/evaluate/etc.
     # training_acc = model.evaluate(data=df, metric='accuracy')
