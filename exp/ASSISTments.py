@@ -28,5 +28,3 @@ if __name__ == '__main__':
     print(model.crossvalidate(data_path=data, forgets=True, multigs=True))
     print(model.crossvalidate(data_path=data, forgets=True, metric='auc', multigs=True))
     print(model.crossvalidate(data_path=data, forgets=True, metric='accuracy', multigs=True))
-    print(model.crossvalidate(data_path=data, forgets=True, metric='doa', multigs=True))
-
