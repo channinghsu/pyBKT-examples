@@ -11,7 +11,7 @@ pd.set_option('max_colwidth', 100)
 pd.set_option('display.width', 1000)
 
 if __name__ == '__main__':
-    model = Model(num_fits=10)  # 创建模型对象
+    model = Model(num_fits=25)  # 创建模型对象
 
     # Load unfamiliar dataset.
     df = pd.read_csv('../data/student-problem-middle.csv')
