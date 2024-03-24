@@ -11,16 +11,18 @@ pd.set_option('max_colwidth', 100)
 pd.set_option('display.width', 1000)
 
 if __name__ == '__main__':
-    model = Model(num_fits=25)  # 创建模型对象
+    model = Model()  # 创建模型对象
 
     # Load unfamiliar dataset.
+    # df = pd.read_csv('../data/mooc_radar_predict_set.csv')
     df = pd.read_csv('../data/student-problem-middle.csv')
-    # df = pd.read_csv('../data/student-problem-coarse.csv')
-    data_path = '../data/middle.csv'
-    config = {'multigs': True,
+    config = {
+              'multigs': False,
+              # 'multigs': True,
               'multilearn': False,
               'forgets': False,
-              'cognitive_label': False,
+              'cognitive_label': True,
+              # 'cognitive_label': False,
               }
     defaults = {'order_id': 'num',
                 'skill_name': 'skill_id',
