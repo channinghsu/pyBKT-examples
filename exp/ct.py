@@ -10,8 +10,8 @@ pd.set_option('max_colwidth', 100)
 # 设置1000列时才换行
 pd.set_option('display.width', 1000)
 if __name__ == '__main__':
-    df = pd.read_csv('../data/ct.csv')
-    model = Model(num_fits=5)  # 创建模型对象
+    df = pd.read_csv('./data/ct.csv')
+    model = Model(num_fits=1)  # 创建模型对象
     model.fit(data=df)
     # model.fit(data_path='data/ct.csv', forgets=True)
 
